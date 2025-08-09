@@ -1,13 +1,37 @@
+fn main() {
+    let greeting = String::from("Hello");
 
-
-fn main(){
-    let v1 = vec![1, 2, 3, 4, 5, 6, 7, 8];
-    let iter = v1.iter();
-    let iter2 = iter.filter(|x| *x % 2 == 0);
-    for i in iter2 {
-        println!("{}", i);
-    }
+    greeting.push_str(", World!"); // Append text to the string
+    println!("{}", greeting);
 }
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Structs with lifetimes
+
+// struct User<'a> {
+//     name : &'a str,
+// }
+
+
+// fn main(){
+//     let name = String::from("John Doe");
+//     let user = User {
+//         name: &name
+//     };
+//     println!("User: {}", user.name);
+// }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// fn main(){
+//     let v1 = vec![1, 2, 3, 4, 5, 6, 7, 8];
+//     let iter = v1.iter();
+//     let iter2 = iter.filter(|x| *x % 2 == 0); 
+//     //Why *x? Because x is a reference to the value in the vector. We need to dereference it to get the actual value.
+//     for i in iter2 {
+//         println!("{}", i);
+//     }
+// }
 
 
 
